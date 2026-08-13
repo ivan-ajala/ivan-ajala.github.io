@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ivan Ajala | BI, Data Analytics & Data Science</title>
+
+  <style>
+    :root {
+      --background: #0f172a;
+      --surface: #1e293b;
+      --surface-light: #334155;
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --primary: #38bdf8;
+      --primary-dark: #0284c7;
+      --border: #475569;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 24px 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .hero {
+      padding: 90px 0 70px;
+      max-width: 850px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 4.2rem);
+      line-height: 1.1;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 span {
+      color: var(--primary);
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1.15rem;
+      max-width: 750px;
+      margin-bottom: 32px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      border: 1px solid var(--primary);
+      transition: 0.2s ease;
+    }
+
+    .button-primary {
+      background: var(--primary);
+      color: #082f49;
+    }
+
+    .button-primary:hover {
+      background: #7dd3fc;
+    }
+
+    .button-secondary {
+      color: var(--primary);
+    }
+
+    .button-secondary:hover {
+      background: rgba(56, 189, 248, 0.1);
+    }
+
+    section {
+      padding: 55px 0;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    .section-description {
+      color: var(--muted);
+      margin-bottom: 30px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 22px;
+    }
+
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      min-height: 280px;
+    }
+
+    .project-card h3 {
+      margin-bottom: 12px;
+      color: var(--primary);
+    }
+
+    .project-card p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .project-card .tag {
+      display: inline-block;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+
+    .project-link {
+      margin-top: auto;
+      color: var(--primary);
+      font-weight: bold;
+    }
+
+    .about {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .about p {
+      color: var(--muted);
+      max-width: 850px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .skill {
+      background: var(--surface-light);
+      color: var(--text);
+      padding: 8px 13px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      padding: 30px 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 650px) {
+      nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+      }
+
+      .hero {
+        padding-top: 60px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a class="logo" href="/">Ivan Ajala</a>
+
+        <ul class="nav-links">
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#sobre">Sobre mim</a></li>
+          <li>
+            <a href="https://github.com/ivan-ajala" target="_blank" rel="noopener noreferrer">
+              GitHub
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container hero">
+      <h1>
+        Business Intelligence,
+        <span>Data Analytics</span>
+        & Data Science
+      </h1>
+
+      <p>
+        Portfólio de projetos aplicados à análise de dados, visualização,
+        modelagem preditiva e construção de soluções para apoio à tomada
+        de decisão.
+      </p>
+
+      <div class="buttons">
+        <a class="button button-primary" href="#projetos">
+          Ver projetos
+        </a>
+
+        <a
+          class="button button-secondary"
+          href="https://github.com/ivan-ajala/projetos_BI"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Repositório no GitHub
+        </a>
+      </div>
+    </section>
+
+    <section id="projetos" class="container">
+      <h2 class="section-title">Projetos em destaque</h2>
+
+      <p class="section-description">
+        Estudos de caso que demonstram o ciclo completo de trabalho com dados,
+        desde a preparação até a comunicação dos resultados.
+      </p>
+
+      <div class="projects">
+        <article class="project-card">
+          <span class="tag">Projeto 01 · Tableau</span>
+
+          <h3>Superstore Sales & Profitability</h3>
+
+          <p>
+            Dashboard de vendas e rentabilidade com análise de descontos,
+            margens, desempenho comercial e indicadores de negócio.
+          </p>
+
+          <a
+            class="project-link"
+            href="https://github.com/ivan-ajala/projetos_BI/tree/main/projeto-01-superstore-tableau"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ver documentação →
+          </a>
+        </article>
+
+        <article class="project-card">
+          <span class="tag">Projeto 02 · Python, React & Machine Learning</span>
+
+          <h3>SECOM Quality Analytics</h3>
+
+          <p>
+            Análise de sensores industriais, identificação de fatores
+            associados a falhas e dashboard interativo para diagnóstico
+            orientado por dados.
+          </p>
+
+          <a class="project-link" href="/projeto-02/">
+            Abrir dashboard →
+          </a>
+        </article>
+
+        <article class="project-card">
+          <span class="tag">Projeto 03 · Em desenvolvimento</span>
+
+          <h3>Novo projeto em breve</h3>
+
+          <p>
+            Novos estudos de caso serão adicionados ao portfólio conforme
+            forem desenvolvidos e documentados.
+          </p>
+
+          <span class="project-link">Em breve</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="sobre" class="about">
+      <div class="container">
+        <h2 class="section-title">Sobre mim</h2>
+
+        <p>
+          Sou Ivan Ajala, profissional com foco em Business Intelligence,
+          Data Analytics e Data Science. Desenvolvo projetos que conectam
+          dados, tecnologia e contexto de negócio para gerar análises claras,
+          indicadores relevantes e suporte à tomada de decisão.
+        </p>
+
+        <div class="skills">
+          <span class="skill">Python</span>
+          <span class="skill">SQL</span>
+          <span class="skill">Pandas</span>
+          <span class="skill">Scikit-learn</span>
+          <span class="skill">Tableau</span>
+          <span class="skill">Power BI</span>
+          <span class="skill">React</span>
+          <span class="skill">Vite</span>
+          <span class="skill">Git & GitHub</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Ivan Ajala · Business Intelligence, Data Analytics & Data Science
+    </div>
+  </footer>
+</body>
+</html>
